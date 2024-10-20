@@ -18,4 +18,12 @@
     <string name="knu_contacts">KNU contacts</string>
     <string name="menu_knu_contacts">KNU contacts</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="info_name_label">Name:</string>
+    <string name="info_surname_label">Surname:</string>
+    <string name="info_group_label">Group:</string>
+    <string name="actual_name">Oleksandr</string>
+    <string name="actual_surname">Starzhynskyi</string>
+    <string name="actual_group">TTP-42</string>
+    <string name="about_developer">About developer</string>
 </resources>

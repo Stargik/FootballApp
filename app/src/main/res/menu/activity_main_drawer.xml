@@ -5,20 +5,15 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
             android:id="@+id/nav_footballclubs"
             android:title="@string/menu_footballclubs" />
 
         <item
             android:id="@+id/nav_knucontacts"
             android:title="@string/knu_contacts" />
+
+        <item
+            android:id="@+id/nav_aboutdeveloper"
+            android:title="@string/about_developer" />
     </group>
 </menu>

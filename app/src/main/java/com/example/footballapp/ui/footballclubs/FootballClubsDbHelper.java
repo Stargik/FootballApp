@@ -106,9 +106,9 @@ public class FootballClubsDbHelper extends SQLiteOpenHelper {
         double totalRank = 0.0;
 
         String query = "SELECT SUM(" + FootballClubEntry.COLUMN_NAME_RANK + ") AS total_rank FROM " +
-                FootballClubEntry.TABLE_NAME + " WHERE " + FootballClubEntry.COLUMN_NAME_COUNTRY + " = ?";
+                FootballClubEntry.TABLE_NAME + " WHERE " + FootballClubEntry.COLUMN_NAME_CITY + " = ?";
 
-        Cursor cursor = db.rawQuery(query, new String[]{"Ukraine"});
+        Cursor cursor = db.rawQuery(query, new String[]{"Kyiv"});
         if (cursor.moveToFirst()) {
             int index = cursor.getColumnIndex("total_rank");
             if (index >= 0){
