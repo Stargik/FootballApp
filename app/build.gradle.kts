@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
+
+val apiKey: String = project.findProperty("MAPS_API_KEY") as String? ?: ""
 
 android {
     namespace = "com.example.footballapp"
@@ -14,6 +17,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "MAPS_API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -31,6 +35,8 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
+        buildConfig = true
     }
 }
 
@@ -45,7 +51,12 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.legacy.support.v4)
     implementation(libs.recyclerview)
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.play.services.maps.v1900)
+    implementation(libs.play.services.location.v2101)
+    implementation(libs.okhttp)
 }

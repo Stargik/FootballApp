@@ -55,6 +55,7 @@ public class FootballClubsDbHelper extends SQLiteOpenHelper {
         String[] projection = {
                 FootballClubEntry.COLUMN_NAME_NAME,
                 FootballClubEntry.COLUMN_NAME_RANK,
+                FootballClubEntry.COLUMN_NAME_CITY,
         };
 
         String sortOrder = FootballClubEntry.COLUMN_NAME_RANK + " DESC";
@@ -64,6 +65,7 @@ public class FootballClubsDbHelper extends SQLiteOpenHelper {
             do {
                 FootballClub footballClub = new FootballClub();
                 footballClub.setName(cursor.getString(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_NAME)));
+                footballClub.setCity(cursor.getString(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_CITY)));
                 footballClub.setRank(cursor.getDouble(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_RANK)));
                 footballClubs.add(footballClub);
             } while(cursor.moveToNext());
@@ -78,6 +80,7 @@ public class FootballClubsDbHelper extends SQLiteOpenHelper {
         String[] projection = {
                 FootballClubEntry.COLUMN_NAME_NAME,
                 FootballClubEntry.COLUMN_NAME_RANK,
+                FootballClubEntry.COLUMN_NAME_CITY,
         };
 
         String selection = FootballClubEntry.COLUMN_NAME_COUNTRY + " = ?";
@@ -90,6 +93,7 @@ public class FootballClubsDbHelper extends SQLiteOpenHelper {
             do {
                 FootballClub footballClub = new FootballClub();
                 footballClub.setName(cursor.getString(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_NAME)));
+                footballClub.setCity(cursor.getString(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_CITY)));
                 footballClub.setRank(cursor.getDouble(cursor.getColumnIndexOrThrow(FootballClubEntry.COLUMN_NAME_RANK)));
                 footballClubs.add(footballClub);
             } while(cursor.moveToNext());

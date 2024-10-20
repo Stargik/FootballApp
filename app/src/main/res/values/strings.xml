@@ -15,4 +15,7 @@
     <string name="all_clubs">All clubs</string>
     <string name="kyiv_clubs_rank">Kyiv clubs rank</string>
     <string name="kyiv_clubs_rank_text">Kyiv clubs rank:</string>
+    <string name="knu_contacts">KNU contacts</string>
+    <string name="menu_knu_contacts">KNU contacts</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -1,23 +1,16 @@
 package com.example.footballapp.ui.footballclubs;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.footballapp.R;
-import com.example.footballapp.databinding.FragmentGalleryBinding;
 import com.example.footballapp.databinding.FragmentItemListBinding;
-import com.example.footballapp.ui.footballclubs.placeholder.PlaceholderContent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,8 +50,6 @@ public class FootballClubsFragment extends Fragment {
             footballClubsDbHelper.addFootballClub(new FootballClub("Real", "Madrid", "Spain",1902, 121.000));
             footballClubsDbHelper.addFootballClub(new FootballClub("Chelsea", "London", "England",1905, 81.000));
             footballClubsDbHelper.addFootballClub(new FootballClub("Inter", "Milan", "Italy",1908, 79.000));
-            //footballClubs = footballClubsDbHelper.getUkrainianFootballClubs();
-            //adapter.setFootballClubs(footballClubs);
         }
 
         binding.allClubsB.setOnClickListener(view1 -> {
